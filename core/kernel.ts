@@ -1,38 +1,50 @@
-import { Client, GatewayIntentBits, Events } from 'discord.js';
+import { Client, GatewayIntentBits, Events, Collection } from 'discord.js';
 import { Syslog } from './syslog';
 import { connectDatabase } from './database';
+import { CommandModule } from './types'; // Ensure you have this interface defined
 import { mountMemberEvents } from '../modules/iam/memberEvents';
 import { mountInteractionManager } from '../modules/interactionManager';
 import { deploySecurityGate } from '../modules/iam/setup'; 
+//import { deploySupportHub } from '../modules/tickets/setup';
+
+// Import Modular Commands
+import { OperatorCommand } from '../modules/commands/operator';
 
 /**
  * Sovereign OS Kernel
  * Central controller for Tasman Dynamics software systems.
  */
 export class Kernel {
-  private client: Client;
+  public client: Client;
+  public commands: Collection<string, CommandModule> = new Collection();
 
   constructor() {
     this.client = new Client({
       intents: [
         GatewayIntentBits.Guilds, 
-        GatewayIntentBits.GuildMembers, // REQUIRED for join/leave tracking
+        GatewayIntentBits.GuildMembers, 
         GatewayIntentBits.MessageContent
       ],
     });
   }
 
   /**
-   * Mounts user-space modules into the system kernel.
+   * Mounts user-space modules and modular commands into the system kernel.
    */
   private async mountModules() {
-    Syslog.info('module_manager', 'Mounting system modules...');
+    Syslog.info('module_manager', 'Mounting system modules and command registry...');
     
-    // These modules now have access to Syslog via the Kernel bridge
-    mountMemberEvents(this.client);
-    mountInteractionManager(this.client);
+    // 1. Register Modular Commands
+    this.commands.set(OperatorCommand.data.name, OperatorCommand);
+    // Add future commands here: this.commands.set(TicketCommand.data.name, TicketCommand);
 
-    Syslog.success('module_manager', 'All modules mounted successfully.');
+    // 2. Initialize Event Listeners
+    mountMemberEvents(this.client);
+    
+    // 3. Initialize Interaction Controller (Passing 'this' to allow command access)
+    mountInteractionManager(this);
+
+    Syslog.success('module_manager', `Mounted ${this.commands.size} commands and system events.`);
   }
 
   /**
@@ -51,16 +63,19 @@ export class Kernel {
 
       // 3. Post-Boot Hook (Ready Event)
       this.client.once(Events.ClientReady, async (c) => {
-        // --- THE MISSING LINK ---
         // Bind the authenticated client to the Syslog engine
         Syslog.init(this.client); 
 
         Syslog.success('kernel', `TasDyn AI Online. Authenticated as ${c.user.tag}`);
         
+        // --- Deployment Hooks ---
         // Deploy the Security Gate for user authentication
         await deploySecurityGate(this.client);
+        
+        // Deploy the Support Hub (Ticket Entry Point)
+        //await deploySupportHub(this.client);
 
-        // Start mirroring terminal output to Discord tasdyn_logs channel
+        // Start mirroring terminal output to Discord logs
         Syslog.interceptConsole();
         
         Syslog.info('kernel', 'Boot sequence complete. System operational.');
