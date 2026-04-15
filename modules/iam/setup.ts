@@ -15,10 +15,26 @@ export const deploySecurityGate = async (client: Client) => {
         const channel = await client.channels.fetch(channelId!) as TextChannel;
 
         if (!channel) {
-            return Syslog.error('iam_setup', `Could not find gate-keeper channel with ID: ${channelId}`);
+            return Syslog.error('iam_setup', `Gate-keeper channel not found (ID: ${channelId})`);
         }
 
-        // 1. Build the Security Gate Embed
+        // --- 1. PURGE PROTOCOL ---
+        // Fetch the last 50 messages to ensure we find any old gates
+        const messages = await channel.messages.fetch({ limit: 50 });
+        
+        // Filter for messages sent by this bot that aren't pinned
+        const oldGates = messages.filter(m => m.author.id === client.user?.id && !m.pinned);
+
+        if (oldGates.size > 0) {
+            Syslog.info('iam_setup', `Purging ${oldGates.size} legacy security gates...`);
+            await channel.bulkDelete(oldGates).catch(err => {
+                Syslog.error('iam_setup', 'Bulk delete failed (messages may be > 14 days old). Falling back to manual deletion.', err);
+                // Fallback: Delete one by one if they are too old for bulkDelete
+                oldGates.forEach(m => m.delete().catch(() => {}));
+            });
+        }
+
+        // --- 2. DEPLOY FRESH GATE ---
         const embed = new EmbedBuilder()
             .setTitle('🔒 TASMAN DYNAMICS | SECURITY GATE')
             .setDescription(
@@ -26,23 +42,20 @@ export const deploySecurityGate = async (client: Client) => {
                 `To prevent unauthorized automated access, please verify your identity below.\n\n` +
                 `By verifying, you agree to the server rules.`
             )
-            .setImage('https://i.imgur.com/your-gate-image.png') // Replace with a TasDyn graphic if you have one
             .setColor(0x2B2D31);
 
-        // 2. Create the Interrupt Button
         const row = new ActionRowBuilder<ButtonBuilder>().addComponents(
             new ButtonBuilder()
-                .setCustomId('gatekeeper_verify') // MUST match your InteractionManager check
+                .setCustomId('gatekeeper_verify')
                 .setLabel('Verify Identity')
                 .setEmoji('🛡️')
                 .setStyle(ButtonStyle.Success)
         );
 
-        // 3. Post to the Channel
         await channel.send({ embeds: [embed], components: [row] });
+        Syslog.success('iam_setup', 'Fresh Security Gate deployed to the network.');
         
-        Syslog.success('iam_setup', 'Security Gate has been deployed to the network.');
     } catch (error) {
-        Syslog.error('iam_setup', 'Critical failure during Security Gate deployment.', error);
+        Syslog.error('iam_setup', 'Failed to cycle Security Gate.', error);
     }
 };

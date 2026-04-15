@@ -1,8 +1,19 @@
-import { ButtonInteraction, Client, GuildMember, MessageFlags } from 'discord.js';
+import { 
+    ButtonInteraction, 
+    Client, 
+    GuildMember, 
+    MessageFlags, 
+    TextChannel, 
+    EmbedBuilder 
+} from 'discord.js';
 import { Config } from '../../core/config';
 import { Syslog } from '../../core/syslog';
 import { db } from '../../core/database';
 
+/**
+ * Handle Gatekeeper Verification
+ * Assigns roles, updates database, and flips the welcome embed state.
+ */
 export const handleVerification = async (interaction: ButtonInteraction, client: Client) => {
     try {
         await interaction.deferReply({ flags: [MessageFlags.Ephemeral] });
@@ -29,9 +40,44 @@ export const handleVerification = async (interaction: ButtonInteraction, client:
 
         await interaction.editReply({ content: '✅ **IDENTITY VERIFIED.** Welcome to the Tasman Dynamics network.' });
         
-        // 3. Audit Log
-        if (Config.discord.channels.audit) {
-            Syslog.discordLog(client, Config.discord.channels.audit, {
+        // 3. Welcome Embed Flip (Amber -> Green)
+        try {
+            const record = db.prepare("SELECT welcomeMessageId FROM users WHERE discordId = ?")
+                            .get(member.id) as { welcomeMessageId: string | null } | undefined;
+
+            if (record?.welcomeMessageId) {
+                // Resolved: Updated to securitygates to match lifecycle events
+                const welcomeChannelId = Config.discord.channels.securitygates;
+                
+                const channel = await client.channels.fetch(welcomeChannelId!) as TextChannel;
+                const message = await channel.messages.fetch(record.welcomeMessageId);
+
+                if (message) {
+                    const verifiedEmbed = new EmbedBuilder()
+                        .setColor(0x2ECC71) // TasDyn Green
+                        .setTitle('✅ Operator Verified')
+                        .setThumbnail(member.user.displayAvatarURL())
+                        .setDescription(
+                            `Operator <@${member.id}> has been successfully authenticated.\n\n` +
+                            `**Clearance Level:** ${userRole.name}\n` +
+                            `**Network Status:** Active`
+                        )
+                        .setFooter({ text: `Authenticated at ${new Date().toLocaleTimeString()}` });
+
+                    await message.edit({ embeds: [verifiedEmbed] });
+                    
+                    Syslog.success('gatekeeper', `Embed state updated to VERIFIED for ${member.user.tag}`, 'USER');
+                }
+            }
+        } catch (flipError) {
+            // We log this but don't fail the interaction, as the role was already given
+            Syslog.warn('gatekeeper', `Failed to flip welcome embed for ${member.user.tag}. Reference: ${record?.welcomeMessageId}`);
+        }
+
+        // 4. Audit Log (Category: AUTH)
+        const logChannel = Config.discord.channels.iam_logs;
+        if (logChannel) {
+            Syslog.discordLog(client, logChannel, {
                 category: 'AUTH',
                 action: 'LOGIN',
                 severity: 'info',

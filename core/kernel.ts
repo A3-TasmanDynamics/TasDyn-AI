@@ -3,7 +3,7 @@ import { Syslog } from './syslog';
 import { connectDatabase } from './database';
 import { mountMemberEvents } from '../modules/iam/memberEvents';
 import { mountInteractionManager } from '../modules/interactionManager';
-import { deploySecurityGate } from '../modules/iam/setup'; // Post-boot deployment logic
+import { deploySecurityGate } from '../modules/iam/setup'; 
 
 /**
  * Sovereign OS Kernel
@@ -16,7 +16,7 @@ export class Kernel {
     this.client = new Client({
       intents: [
         GatewayIntentBits.Guilds, 
-        GatewayIntentBits.GuildMembers, 
+        GatewayIntentBits.GuildMembers, // REQUIRED for join/leave tracking
         GatewayIntentBits.MessageContent
       ],
     });
@@ -28,6 +28,7 @@ export class Kernel {
   private async mountModules() {
     Syslog.info('module_manager', 'Mounting system modules...');
     
+    // These modules now have access to Syslog via the Kernel bridge
     mountMemberEvents(this.client);
     mountInteractionManager(this.client);
 
@@ -50,11 +51,17 @@ export class Kernel {
 
       // 3. Post-Boot Hook (Ready Event)
       this.client.once(Events.ClientReady, async (c) => {
+        // --- THE MISSING LINK ---
+        // Bind the authenticated client to the Syslog engine
+        Syslog.init(this.client); 
+
         Syslog.success('kernel', `TasDyn AI Online. Authenticated as ${c.user.tag}`);
         
         // Deploy the Security Gate for user authentication
-        // Note: Check modules/iam/setup.ts to ensure it doesn't duplicate messages.
         await deploySecurityGate(this.client);
+
+        // Start mirroring terminal output to Discord tasdyn_logs channel
+        Syslog.interceptConsole();
         
         Syslog.info('kernel', 'Boot sequence complete. System operational.');
       });
