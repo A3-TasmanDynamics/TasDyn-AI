@@ -24,6 +24,19 @@ export const connectDatabase = async () => {
       )
     `).run();
 
+    db.prepare(`
+      CREATE TABLE IF NOT EXISTS tickets (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        channelId TEXT UNIQUE NOT NULL,
+        creatorId TEXT NOT NULL,
+        subject TEXT,
+        status TEXT DEFAULT 'open',
+        transcript TEXT, 
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        closedAt DATETIME
+      )
+    `).run();
+
     // 2. Schema Evolution (Auto-Patch)
     // Checks if the welcomeMessageId column exists in case the table was created previously
     const tableInfo = db.prepare("PRAGMA table_info(users)").all() as any[];

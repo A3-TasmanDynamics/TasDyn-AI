@@ -654,3 +654,164 @@
 {"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Interaction Interrupt Controller...","timestamp":"2026-04-15T04:55:23.249Z"}
 {"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Mounted 1 commands and system events.","timestamp":"2026-04-15T04:55:23.250Z"}
 {"action":"SYS_ERROR","category":"ERROR","level":"error","message":"KERNEL PANIC: Boot sequence interrupted.","timestamp":"2026-04-15T04:55:23.665Z","trace":"DiscordjsError [TokenInvalid]: An invalid token was provided.\n    at WebSocketManager.connect (E:\\2. Tasman Dynamics\\0. github\\TasDyn-AI\\node_modules\\discord.js\\src\\client\\websocket\\WebSocketManager.js:140:26)\n    at Client.login (E:\\2. Tasman Dynamics\\0. github\\TasDyn-AI\\node_modules\\discord.js\\src\\client\\Client.js:229:21)\n    at Kernel.boot (E:\\2. Tasman Dynamics\\0. github\\TasDyn-AI\\core\\kernel.ts:85:25)"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"--- STARTING SYSTEM ---","timestamp":"2026-04-15T04:55:38.837Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting high-performance SQLite driver...","timestamp":"2026-04-15T04:55:38.838Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Database connection established and tables verified.","timestamp":"2026-04-15T04:55:38.838Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting system modules and command registry...","timestamp":"2026-04-15T04:55:38.838Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Member Lifecycle Events...","timestamp":"2026-04-15T04:55:38.839Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Interaction Interrupt Controller...","timestamp":"2026-04-15T04:55:38.839Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Mounted 1 commands and system events.","timestamp":"2026-04-15T04:55:38.839Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"TasDyn AI Online. Authenticated as TasDyn AI#5355","timestamp":"2026-04-15T04:55:40.352Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","id":"AL_1776228940353_3mnllew","level":"info","message":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T04:55:40.353Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Purging 1 legacy security gates...","timestamp":"2026-04-15T04:55:40.743Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Purging 1 legacy security gates...","id":"AL_1776228940743_k9keujs","level":"info","message":"[IAM_SETUP] Purging 1 legacy security gates...","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T04:55:40.744Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Fresh Security Gate deployed to the network.","timestamp":"2026-04-15T04:55:41.662Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Fresh Security Gate deployed to the network.","id":"AL_1776228941662_o0atstn","level":"info","message":"[IAM_SETUP] Fresh Security Gate deployed to the network.","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T04:55:41.662Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Boot sequence complete. System operational.","timestamp":"2026-04-15T04:55:41.662Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"--- STARTING SYSTEM ---","timestamp":"2026-04-15T04:57:49.592Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting high-performance SQLite driver...","timestamp":"2026-04-15T04:57:49.593Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Database connection established and tables verified.","timestamp":"2026-04-15T04:57:49.594Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting system modules and command registry...","timestamp":"2026-04-15T04:57:49.594Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Member Lifecycle Events...","timestamp":"2026-04-15T04:57:49.594Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Interaction Interrupt Controller...","timestamp":"2026-04-15T04:57:49.594Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Mounted 1 commands and system events.","timestamp":"2026-04-15T04:57:49.594Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"TasDyn AI Online. Authenticated as TasDyn AI#5355","timestamp":"2026-04-15T04:57:50.958Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","id":"AL_1776229070959_t8qrb25","level":"info","message":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T04:57:50.959Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Purging 1 legacy security gates...","timestamp":"2026-04-15T04:57:51.692Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Purging 1 legacy security gates...","id":"AL_1776229071692_sysixv1","level":"info","message":"[IAM_SETUP] Purging 1 legacy security gates...","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T04:57:51.692Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Fresh Security Gate deployed to the network.","timestamp":"2026-04-15T04:57:52.438Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Fresh Security Gate deployed to the network.","id":"AL_1776229072438_xesq5fu","level":"info","message":"[IAM_SETUP] Fresh Security Gate deployed to the network.","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T04:57:52.438Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Boot sequence complete. System operational.","timestamp":"2026-04-15T04:57:52.438Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"--- STARTING SYSTEM ---","timestamp":"2026-04-15T04:57:53.633Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting high-performance SQLite driver...","timestamp":"2026-04-15T04:57:53.634Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Database connection established and tables verified.","timestamp":"2026-04-15T04:57:53.634Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting system modules and command registry...","timestamp":"2026-04-15T04:57:53.635Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Member Lifecycle Events...","timestamp":"2026-04-15T04:57:53.635Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Interaction Interrupt Controller...","timestamp":"2026-04-15T04:57:53.635Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Mounted 1 commands and system events.","timestamp":"2026-04-15T04:57:53.635Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"TasDyn AI Online. Authenticated as TasDyn AI#5355","timestamp":"2026-04-15T04:57:55.077Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","id":"AL_1776229075077_mxt2e6p","level":"info","message":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T04:57:55.077Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Purging 1 legacy security gates...","timestamp":"2026-04-15T04:57:55.552Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Purging 1 legacy security gates...","id":"AL_1776229075553_k0ql7u3","level":"info","message":"[IAM_SETUP] Purging 1 legacy security gates...","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T04:57:55.553Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Fresh Security Gate deployed to the network.","timestamp":"2026-04-15T04:57:56.369Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Fresh Security Gate deployed to the network.","id":"AL_1776229076369_36gjr7f","level":"info","message":"[IAM_SETUP] Fresh Security Gate deployed to the network.","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T04:57:56.369Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Boot sequence complete. System operational.","timestamp":"2026-04-15T04:57:56.370Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"--- STARTING SYSTEM ---","timestamp":"2026-04-15T04:59:15.841Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting high-performance SQLite driver...","timestamp":"2026-04-15T04:59:15.842Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Database connection established and tables verified.","timestamp":"2026-04-15T04:59:15.842Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting system modules and command registry...","timestamp":"2026-04-15T04:59:15.842Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Member Lifecycle Events...","timestamp":"2026-04-15T04:59:15.842Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Interaction Interrupt Controller...","timestamp":"2026-04-15T04:59:15.843Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Mounted 1 commands and system events.","timestamp":"2026-04-15T04:59:15.843Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"TasDyn AI Online. Authenticated as TasDyn AI#5355","timestamp":"2026-04-15T04:59:17.404Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","id":"AL_1776229157404_cwyf99j","level":"info","message":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T04:59:17.404Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"--- STARTING SYSTEM ---","timestamp":"2026-04-15T04:59:18.090Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting high-performance SQLite driver...","timestamp":"2026-04-15T04:59:18.091Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Database connection established and tables verified.","timestamp":"2026-04-15T04:59:18.091Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting system modules and command registry...","timestamp":"2026-04-15T04:59:18.091Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Member Lifecycle Events...","timestamp":"2026-04-15T04:59:18.091Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Interaction Interrupt Controller...","timestamp":"2026-04-15T04:59:18.092Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Mounted 1 commands and system events.","timestamp":"2026-04-15T04:59:18.092Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"TasDyn AI Online. Authenticated as TasDyn AI#5355","timestamp":"2026-04-15T04:59:19.284Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","id":"AL_1776229159284_ovjo9ek","level":"info","message":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T04:59:19.284Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Purging 1 legacy security gates...","timestamp":"2026-04-15T04:59:19.630Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Purging 1 legacy security gates...","id":"AL_1776229159631_abqfe2z","level":"info","message":"[IAM_SETUP] Purging 1 legacy security gates...","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T04:59:19.631Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Fresh Security Gate deployed to the network.","timestamp":"2026-04-15T04:59:20.541Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Fresh Security Gate deployed to the network.","id":"AL_1776229160541_l5nzu4v","level":"info","message":"[IAM_SETUP] Fresh Security Gate deployed to the network.","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T04:59:20.541Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Boot sequence complete. System operational.","timestamp":"2026-04-15T04:59:20.924Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"--- STARTING SYSTEM ---","timestamp":"2026-04-15T04:59:42.628Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting high-performance SQLite driver...","timestamp":"2026-04-15T04:59:42.630Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Database connection established and tables verified.","timestamp":"2026-04-15T04:59:42.630Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting system modules and command registry...","timestamp":"2026-04-15T04:59:42.630Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Member Lifecycle Events...","timestamp":"2026-04-15T04:59:42.631Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Interaction Interrupt Controller...","timestamp":"2026-04-15T04:59:42.631Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Mounted 1 commands and system events.","timestamp":"2026-04-15T04:59:42.631Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"TasDyn AI Online. Authenticated as TasDyn AI#5355","timestamp":"2026-04-15T04:59:44.459Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","id":"AL_1776229184459_3j0rzhu","level":"info","message":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T04:59:44.459Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Purging 1 legacy security gates...","timestamp":"2026-04-15T04:59:45.825Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Purging 1 legacy security gates...","id":"AL_1776229185825_5r49683","level":"info","message":"[IAM_SETUP] Purging 1 legacy security gates...","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T04:59:45.825Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Fresh Security Gate deployed to the network.","timestamp":"2026-04-15T04:59:46.537Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Fresh Security Gate deployed to the network.","id":"AL_1776229186537_8g353qm","level":"info","message":"[IAM_SETUP] Fresh Security Gate deployed to the network.","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T04:59:46.537Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Boot sequence complete. System operational.","timestamp":"2026-04-15T04:59:46.987Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"--- STARTING SYSTEM ---","timestamp":"2026-04-15T05:00:48.870Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting high-performance SQLite driver...","timestamp":"2026-04-15T05:00:48.871Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Database connection established and tables verified.","timestamp":"2026-04-15T05:00:48.871Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting system modules and command registry...","timestamp":"2026-04-15T05:00:48.871Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Member Lifecycle Events...","timestamp":"2026-04-15T05:00:48.871Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Interaction Interrupt Controller...","timestamp":"2026-04-15T05:00:48.871Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Mounted 1 commands and system events.","timestamp":"2026-04-15T05:00:48.871Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"TasDyn AI Online. Authenticated as TasDyn AI#5355","timestamp":"2026-04-15T05:00:50.353Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","id":"AL_1776229250353_lrsbgz2","level":"info","message":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T05:00:50.353Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Purging 1 legacy security gates...","timestamp":"2026-04-15T05:00:50.691Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Purging 1 legacy security gates...","id":"AL_1776229250692_jbaiqxo","level":"info","message":"[IAM_SETUP] Purging 1 legacy security gates...","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T05:00:50.692Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Fresh Security Gate deployed to the network.","timestamp":"2026-04-15T05:00:51.587Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Fresh Security Gate deployed to the network.","id":"AL_1776229251587_4xtrdei","level":"info","message":"[IAM_SETUP] Fresh Security Gate deployed to the network.","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T05:00:51.587Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Boot sequence complete. System operational.","timestamp":"2026-04-15T05:00:52.856Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"--- STARTING SYSTEM ---","timestamp":"2026-04-15T05:02:57.997Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting high-performance SQLite driver...","timestamp":"2026-04-15T05:02:57.998Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Database connection established and tables verified.","timestamp":"2026-04-15T05:02:57.998Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting system modules and command registry...","timestamp":"2026-04-15T05:02:57.998Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Member Lifecycle Events...","timestamp":"2026-04-15T05:02:57.998Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Interaction Interrupt Controller...","timestamp":"2026-04-15T05:02:57.998Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Mounted 1 commands and system events.","timestamp":"2026-04-15T05:02:57.998Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"TasDyn AI Online. Authenticated as TasDyn AI#5355","timestamp":"2026-04-15T05:02:59.514Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","id":"AL_1776229379514_24zjs3z","level":"info","message":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T05:02:59.514Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"--- STARTING SYSTEM ---","timestamp":"2026-04-15T05:03:00.406Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting high-performance SQLite driver...","timestamp":"2026-04-15T05:03:00.406Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Database connection established and tables verified.","timestamp":"2026-04-15T05:03:00.407Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting system modules and command registry...","timestamp":"2026-04-15T05:03:00.407Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Member Lifecycle Events...","timestamp":"2026-04-15T05:03:00.407Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Interaction Interrupt Controller...","timestamp":"2026-04-15T05:03:00.407Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Mounted 1 commands and system events.","timestamp":"2026-04-15T05:03:00.408Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"TasDyn AI Online. Authenticated as TasDyn AI#5355","timestamp":"2026-04-15T05:03:01.682Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","id":"AL_1776229381683_crrg6vm","level":"info","message":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T05:03:01.683Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Purging 1 legacy security gates...","timestamp":"2026-04-15T05:03:02.029Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Purging 1 legacy security gates...","id":"AL_1776229382029_k4gy6po","level":"info","message":"[IAM_SETUP] Purging 1 legacy security gates...","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T05:03:02.029Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Fresh Security Gate deployed to the network.","timestamp":"2026-04-15T05:03:02.848Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Fresh Security Gate deployed to the network.","id":"AL_1776229382848_ehxgnpy","level":"info","message":"[IAM_SETUP] Fresh Security Gate deployed to the network.","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T05:03:02.848Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Boot sequence complete. System operational.","timestamp":"2026-04-15T05:03:04.288Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"--- STARTING SYSTEM ---","timestamp":"2026-04-15T05:03:11.118Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting high-performance SQLite driver...","timestamp":"2026-04-15T05:03:11.119Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Database connection established and tables verified.","timestamp":"2026-04-15T05:03:11.120Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting system modules and command registry...","timestamp":"2026-04-15T05:03:11.120Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Member Lifecycle Events...","timestamp":"2026-04-15T05:03:11.120Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Interaction Interrupt Controller...","timestamp":"2026-04-15T05:03:11.120Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Mounted 1 commands and system events.","timestamp":"2026-04-15T05:03:11.120Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"TasDyn AI Online. Authenticated as TasDyn AI#5355","timestamp":"2026-04-15T05:03:12.454Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","id":"AL_1776229392455_y6rru36","level":"info","message":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T05:03:12.455Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Purging 1 legacy security gates...","timestamp":"2026-04-15T05:03:12.840Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Purging 1 legacy security gates...","id":"AL_1776229392840_nh1bwfe","level":"info","message":"[IAM_SETUP] Purging 1 legacy security gates...","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T05:03:12.840Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Fresh Security Gate deployed to the network.","timestamp":"2026-04-15T05:03:13.656Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Fresh Security Gate deployed to the network.","id":"AL_1776229393656_nbravwl","level":"info","message":"[IAM_SETUP] Fresh Security Gate deployed to the network.","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T05:03:13.656Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Boot sequence complete. System operational.","timestamp":"2026-04-15T05:03:14.976Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"--- STARTING SYSTEM ---","timestamp":"2026-04-15T05:03:46.169Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting high-performance SQLite driver...","timestamp":"2026-04-15T05:03:46.170Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Database connection established and tables verified.","timestamp":"2026-04-15T05:03:46.170Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting system modules and command registry...","timestamp":"2026-04-15T05:03:46.171Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Member Lifecycle Events...","timestamp":"2026-04-15T05:03:46.171Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Interaction Interrupt Controller...","timestamp":"2026-04-15T05:03:46.171Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Mounted 1 commands and system events.","timestamp":"2026-04-15T05:03:46.171Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"TasDyn AI Online. Authenticated as TasDyn AI#5355","timestamp":"2026-04-15T05:03:47.840Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","id":"AL_1776229427841_wrraohf","level":"info","message":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T05:03:47.841Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Purging 1 legacy security gates...","timestamp":"2026-04-15T05:03:48.313Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Purging 1 legacy security gates...","id":"AL_1776229428313_3z05w5a","level":"info","message":"[IAM_SETUP] Purging 1 legacy security gates...","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T05:03:48.313Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Fresh Security Gate deployed to the network.","timestamp":"2026-04-15T05:03:49.036Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Fresh Security Gate deployed to the network.","id":"AL_1776229429037_hom2gn5","level":"info","message":"[IAM_SETUP] Fresh Security Gate deployed to the network.","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T05:03:49.037Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Boot sequence complete. System operational.","timestamp":"2026-04-15T05:03:50.201Z"}
+{"action":"SYS_ERROR","category":"ERROR","level":"error","message":"Interrupt Failure in 1493839433018118226","timestamp":"2026-04-15T05:04:36.565Z","trace":"DiscordAPIError[50001]: Missing Access\n    at handleErrors (E:\\2. Tasman Dynamics\\0. github\\TasDyn-AI\\node_modules\\@discordjs\\rest\\src\\lib\\handlers\\Shared.ts:148:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async SequentialHandler.runRequest (E:\\2. Tasman Dynamics\\0. github\\TasDyn-AI\\node_modules\\@discordjs\\rest\\src\\lib\\handlers\\SequentialHandler.ts:417:20)\n    at async SequentialHandler.queueRequest (E:\\2. Tasman Dynamics\\0. github\\TasDyn-AI\\node_modules\\@discordjs\\rest\\src\\lib\\handlers\\SequentialHandler.ts:169:11)\n    at async _REST.request (E:\\2. Tasman Dynamics\\0. github\\TasDyn-AI\\node_modules\\@discordjs\\rest\\src\\lib\\REST.ts:210:20)\n    at async TextChannel.send (E:\\2. Tasman Dynamics\\0. github\\TasDyn-AI\\node_modules\\discord.js\\src\\structures\\interfaces\\TextBasedChannel.js:195:15)\n    at async TicketService.createTicket (E:\\2. Tasman Dynamics\\0. github\\TasDyn-AI\\modules\\tickets\\ticketService.ts:41:9)\n    at async Client.<anonymous> (E:\\2. Tasman Dynamics\\0. github\\TasDyn-AI\\modules\\interactionManager.ts:81:21)"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"--- STARTING SYSTEM ---","timestamp":"2026-04-15T05:55:32.513Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting high-performance SQLite driver...","timestamp":"2026-04-15T05:55:32.514Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Database connection established and tables verified.","timestamp":"2026-04-15T05:55:32.515Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting system modules and command registry...","timestamp":"2026-04-15T05:55:32.515Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Member Lifecycle Events...","timestamp":"2026-04-15T05:55:32.515Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Interaction Interrupt Controller...","timestamp":"2026-04-15T05:55:32.515Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Mounted 1 commands and system events.","timestamp":"2026-04-15T05:55:32.515Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"TasDyn AI Online. Authenticated as TasDyn AI#5355","timestamp":"2026-04-15T05:55:34.596Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","id":"AL_1776232534596_8a4z4y1","level":"info","message":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T05:55:34.596Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Purging 1 legacy security gates...","timestamp":"2026-04-15T05:55:34.907Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Purging 1 legacy security gates...","id":"AL_1776232534907_t1lmth4","level":"info","message":"[IAM_SETUP] Purging 1 legacy security gates...","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T05:55:34.907Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Fresh Security Gate deployed to the network.","timestamp":"2026-04-15T05:55:35.754Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Fresh Security Gate deployed to the network.","id":"AL_1776232535754_gce9diq","level":"info","message":"[IAM_SETUP] Fresh Security Gate deployed to the network.","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T05:55:35.754Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Boot sequence complete. System operational.","timestamp":"2026-04-15T05:55:36.939Z"}
+{"action":"SYS_LOG","category":"TICKET","level":"info","message":"Channel ticket-25235 created for UID: 252354071380361218","timestamp":"2026-04-15T05:56:00.395Z"}
+{"action":"SYS_LOG","category":"TICKET","level":"success","message":"Session ticket-25235 archived and purged.","timestamp":"2026-04-15T05:56:17.886Z"}

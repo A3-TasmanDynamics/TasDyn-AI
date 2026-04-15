@@ -5,7 +5,7 @@ import { CommandModule } from './types'; // Ensure you have this interface defin
 import { mountMemberEvents } from '../modules/iam/memberEvents';
 import { mountInteractionManager } from '../modules/interactionManager';
 import { deploySecurityGate } from '../modules/iam/setup'; 
-//import { deploySupportHub } from '../modules/tickets/setup';
+import { deploySupportHub } from '../modules/tickets/setup';
 
 // Import Modular Commands
 import { OperatorCommand } from '../modules/commands/operator';
@@ -73,7 +73,7 @@ export class Kernel {
         await deploySecurityGate(this.client);
         
         // Deploy the Support Hub (Ticket Entry Point)
-        //await deploySupportHub(this.client);
+        await deploySupportHub(this.client);
 
         // Start mirroring terminal output to Discord logs
         Syslog.interceptConsole();

@@ -6,7 +6,7 @@ import { Kernel } from '../core/kernel';
 import { handleVerification } from './iam/gatekeeper';
 import { handleBroadcastCommand } from './broadcast/broadcastCommand';
 import { handleBroadcastModalSubmit } from './broadcast/modalHandler';
-//import { TicketService } from './tickets/ticketService';
+import { TicketService } from './tickets/ticketService';
 
 /**
  * Interaction Interrupt Controller (IRQ)
@@ -29,7 +29,7 @@ export const mountInteractionManager = (kernel: Kernel) => {
                 }
 
                 // --- TICKET SYSTEM: OPEN PROMPT ---
-                /*if (customId === 'ticket_open_prompt') {
+                if (customId === 'ticket_open_prompt') {
                     const modal = new ModalBuilder()
                         .setCustomId('modal_ticket_create')
                         .setTitle('TICKET_INIT // SUPPORT_REQUEST');
@@ -43,12 +43,12 @@ export const mountInteractionManager = (kernel: Kernel) => {
 
                     modal.addComponents(new ActionRowBuilder<TextInputBuilder>().addComponents(subjectInput));
                     return await interaction.showModal(modal);
-                }*/
+                }
 
                 // --- TICKET SYSTEM: CLOSE & ARCHIVE ---
-                /*if (customId.startsWith('ticket_close_')) {
+                if (customId.startsWith('ticket_close_')) {
                     return await TicketService.closeTicket(interaction.channel as TextChannel, interaction.user.id);
-                }*/
+                }
 
                 // --- SYSLOG MODERATION ACTIONS ---
                 if (customId.startsWith('mod_')) {
@@ -76,11 +76,11 @@ export const mountInteractionManager = (kernel: Kernel) => {
                 }
 
                 // --- TICKET SYSTEM: CREATION --- 
-                /*if (customId === 'modal_ticket_create') {
+                if (customId === 'modal_ticket_create') {
                     const subject = interaction.fields.getTextInputValue('ticket_subject');
                     await TicketService.createTicket(kernel.client, interaction.user.id, subject, interaction.guildId!);
                     return await interaction.reply({ content: '✅ **TICKET_INIT_SUCCESS.** Channel generated in the support category.', flags: [MessageFlags.Ephemeral] });
-                }*/
+                }
                 
                 Syslog.info('irq_controller', `Unknown modal submission received: ${customId}`);
             }
