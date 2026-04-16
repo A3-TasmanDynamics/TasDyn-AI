@@ -6,6 +6,7 @@ import { ca } from 'zod/v4/locales';
 const envSchema = z.object({
     DISCORD_TOKEN: z.string().min(1, "Missing core Discord token"),
     DISCORD_CLIENT_ID: z.string().min(1, "Missing client ID"),
+    DISCORD_GUILD_ID: z.string().min(1, "Missing guild ID"),
     API_WEATHER_TOKEN: z.string().optional(), 
     API_DATABASE_URL: z.string().url().optional(),
 
@@ -43,6 +44,7 @@ export const Config = {
         core: {
         token: env.DISCORD_TOKEN,
         clientId: env.DISCORD_CLIENT_ID,
+        guildId: env.DISCORD_GUILD_ID,
         },
         channels: {
             tasdyn_logs: env.DISCORD_CHANNEL_TASDYN_LOGS_ID,

@@ -9,6 +9,7 @@ import { deploySupportHub } from '../modules/tickets/setup';
 
 // Import Modular Commands
 import { OperatorCommand } from '../modules/commands/operator';
+import { TicketCommand } from '../modules/commands/tickets';
 
 /**
  * Sovereign OS Kernel
@@ -36,7 +37,7 @@ export class Kernel {
     
     // 1. Register Modular Commands
     this.commands.set(OperatorCommand.data.name, OperatorCommand);
-    // Add future commands here: this.commands.set(TicketCommand.data.name, TicketCommand);
+    this.commands.set(TicketCommand.data.name, TicketCommand);
 
     // 2. Initialize Event Listeners
     mountMemberEvents(this.client);

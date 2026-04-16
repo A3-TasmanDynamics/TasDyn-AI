@@ -1,31 +1,45 @@
+import 'dotenv/config'; // Move this to the absolute top
 import { REST, Routes } from 'discord.js';
 import { OperatorCommand } from '../modules/commands/operator';
-import 'dotenv/config';
+import { TicketCommand } from '../modules/commands/tickets';
+
+// 1. Pre-Flight Token Check
+const token = process.env.DISCORD_TOKEN;
+const clientId = process.env.DISCORD_CLIENT_ID;
+const guildId = process.env.DISCORD_GUILD_ID;
+
+if (!token || !clientId || !guildId) {
+    console.error('❌ [CRITICAL] Environment Variables Missing!');
+    console.log(`- Token Present: ${!!token}`);
+    console.log(`- Client ID Present: ${!!clientId}`);
+    console.log(`- Guild ID Present: ${!!guildId}`);
+    process.exit(1);
+}
 
 const commands = [
     OperatorCommand.data.toJSON(),
+    TicketCommand.data.toJSON(),
 ];
 
-const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_CORE_TOKEN!);
+const rest = new REST({ version: '10' }).setToken(token);
 
 (async () => {
     try {
-        console.log('📡 [NETWORK] Initiating Command Sync...');
+        console.log(`📡 [NETWORK] Initiating Sync for ${commands.length} modular commands...`);
 
-        // STEP 1: NUKE GLOBAL COMMANDS
-        // This clears any "ghost" commands stuck at the account level
-        await rest.put(Routes.applicationCommands(process.env.CLIENT_ID!), { body: [] });
-        console.log('✅ [CLEAN] Global command cache cleared.');
+        // 2. PURGE GLOBAL CACHE
+        await rest.put(Routes.applicationCommands(clientId), { body: [] });
+        console.log('✅ [CLEAN] Global command cache purged.');
 
-        // STEP 2: REGISTER GUILD COMMANDS
-        // This pushes /operator specifically to your dev server for instant update
+        // 3. REGISTER GUILD COMMANDS
         await rest.put(
-            Routes.applicationGuildCommands(process.env.CLIENT_ID!, process.env.GUILD_ID!),
+            Routes.applicationGuildCommands(clientId, guildId),
             { body: commands }
         );
 
-        console.log(`🚀 [SUCCESS] TasDyn Operator Suite deployed to Guild: ${process.env.GUILD_ID}`);
+        console.log(`🚀 [SUCCESS] TasDyn Operator Suite deployed to Guild: ${guildId}`);
+        
     } catch (error) {
-        console.error('❌ [CRITICAL] Deployment failed:', error);
+        console.error('❌ [CRITICAL] Sync Failure:', error);
     }
 })();

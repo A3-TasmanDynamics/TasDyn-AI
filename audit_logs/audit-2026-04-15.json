@@ -815,3 +815,17 @@
 {"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Boot sequence complete. System operational.","timestamp":"2026-04-15T05:55:36.939Z"}
 {"action":"SYS_LOG","category":"TICKET","level":"info","message":"Channel ticket-25235 created for UID: 252354071380361218","timestamp":"2026-04-15T05:56:00.395Z"}
 {"action":"SYS_LOG","category":"TICKET","level":"success","message":"Session ticket-25235 archived and purged.","timestamp":"2026-04-15T05:56:17.886Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"--- STARTING SYSTEM ---","timestamp":"2026-04-15T06:00:20.683Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting high-performance SQLite driver...","timestamp":"2026-04-15T06:00:20.684Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Database connection established and tables verified.","timestamp":"2026-04-15T06:00:20.685Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting system modules and command registry...","timestamp":"2026-04-15T06:00:20.685Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Member Lifecycle Events...","timestamp":"2026-04-15T06:00:20.685Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Mounting Interaction Interrupt Controller...","timestamp":"2026-04-15T06:00:20.685Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Mounted 1 commands and system events.","timestamp":"2026-04-15T06:00:20.686Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"TasDyn AI Online. Authenticated as TasDyn AI#5355","timestamp":"2026-04-15T06:00:22.972Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","id":"AL_1776232822972_fx91xus","level":"info","message":"[KERNEL] TasDyn AI Online. Authenticated as TasDyn AI#5355","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T06:00:22.972Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Purging 1 legacy security gates...","timestamp":"2026-04-15T06:00:23.329Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Purging 1 legacy security gates...","id":"AL_1776232823329_kipom8s","level":"info","message":"[IAM_SETUP] Purging 1 legacy security gates...","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T06:00:23.329Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"success","message":"Fresh Security Gate deployed to the network.","timestamp":"2026-04-15T06:00:24.290Z"}
+{"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[IAM_SETUP] Fresh Security Gate deployed to the network.","id":"AL_1776232824291_d8uw6pe","level":"info","message":"[IAM_SETUP] Fresh Security Gate deployed to the network.","severity":"info","source":"api","status":"success","timestamp":"2026-04-15T06:00:24.291Z"}
+{"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Boot sequence complete. System operational.","timestamp":"2026-04-15T06:00:25.467Z"}
