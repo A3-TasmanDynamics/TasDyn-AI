@@ -11,6 +11,9 @@ import { deploySupportHub } from '../modules/tickets/setup';
 import { OperatorCommand } from '../modules/commands/operator';
 import { TicketCommand } from '../modules/commands/tickets';
 
+// Import System Modules
+import { CommitTracker } from '../modules/github/commitTracker';
+
 /**
  * Sovereign OS Kernel
  * Central controller for Tasman Dynamics software systems.
@@ -75,6 +78,14 @@ export class Kernel {
         
         // Deploy the Support Hub (Ticket Entry Point)
         await deploySupportHub(this.client);
+
+        // Start the GitHub Commit Tracker
+        Syslog.info('github_uplink', 'Initializing Dev Heartbeat Service...');
+        await CommitTracker.checkCommits(this.client);
+
+            setInterval(async () => {
+            await CommitTracker.checkCommits(this.client);
+        }, 5 * 60 * 1000);
 
         // Start mirroring terminal output to Discord logs
         Syslog.interceptConsole();

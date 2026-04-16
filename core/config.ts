@@ -20,6 +20,9 @@ const envSchema = z.object({
     DISCORD_CHANNEL_GATEKEEPER_ID: z.string().min(1, "Missing gatekeeper channel ID"),
     DISCORD_CHANNEL_SECURITYGATES_ID: z.string().min(1, "Missing security gates channel ID"),
 
+    DISCORD_CHANNEL_RELEASES_ID: z.string().min(1, "Missing releases channel ID"),
+    DISCORD_CHANNEL_DEV_LOGS_ID: z.string().min(1, "Missing dev logs channel ID"),
+
     DISCORD_CHANNEL_SUPPORT_ID: z.string().min(1, "Missing support hub channel ID"),
     DISCORD_CATEGORY_SUPPORT_ID: z.string().min(1, "Missing support category ID"),
 
@@ -56,6 +59,8 @@ export const Config = {
             gatekeeper: env.DISCORD_CHANNEL_GATEKEEPER_ID,
             securitygates: env.DISCORD_CHANNEL_SECURITYGATES_ID,
             support: env.DISCORD_CHANNEL_SUPPORT_ID,
+            releases: process.env.DISCORD_CHANNEL_RELEASES_ID,
+            dev_logs: process.env.DISCORD_CHANNEL_DEV_LOGS_ID
         },
         categories: {
             tickets: env.DISCORD_CATEGORY_SUPPORT_ID

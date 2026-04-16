@@ -37,6 +37,14 @@ export const connectDatabase = async () => {
       )
     `).run();
 
+    db.prepare(`
+      CREATE TABLE IF NOT EXISTS github_commits (
+        repoName TEXT PRIMARY KEY,
+        lastSha TEXT NOT NULL,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP
+      )
+    `).run();
+
     // 2. Schema Evolution (Auto-Patch)
     // Checks if the welcomeMessageId column exists in case the table was created previously
     const tableInfo = db.prepare("PRAGMA table_info(users)").all() as any[];
