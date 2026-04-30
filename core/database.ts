@@ -45,6 +45,14 @@ export const connectDatabase = async () => {
       )
     `).run();
 
+    db.prepare(`
+      CREATE TABLE IF NOT EXISTS steam_watch (
+        item_id TEXT PRIMARY KEY,
+        last_entry_date TEXT NOT NULL,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP
+      )
+    `).run();
+
     // 2. Schema Evolution (Auto-Patch)
     // Checks if the welcomeMessageId column exists in case the table was created previously
     const tableInfo = db.prepare("PRAGMA table_info(users)").all() as any[];
