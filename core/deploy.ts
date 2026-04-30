@@ -1,7 +1,6 @@
 import 'dotenv/config'; // Move this to the absolute top
 import { REST, Routes } from 'discord.js';
-import { OperatorCommand } from '../modules/commands/operator';
-import { TicketCommand } from '../modules/commands/tickets';
+import { loadModules } from './moduleLoader';
 
 // 1. Pre-Flight Token Check
 const token = process.env.DISCORD_TOKEN;
@@ -16,10 +15,11 @@ if (!token || !clientId || !guildId) {
     process.exit(1);
 }
 
-const commands = [
-    OperatorCommand.data.toJSON(),
-    TicketCommand.data.toJSON(),
-];
+// Auto-discover all modules — same source of truth as the bot runtime
+const modules = await loadModules();
+const commands = modules
+    .flatMap(m => m.commands ?? [])
+    .map(cmd => cmd.data.toJSON());
 
 const rest = new REST({ version: '10' }).setToken(token);
 

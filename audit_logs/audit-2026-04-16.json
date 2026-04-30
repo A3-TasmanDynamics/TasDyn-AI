@@ -78,3 +78,12 @@
 {"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Initializing Dev Heartbeat Service...","timestamp":"2026-04-16T11:47:48.408Z"}
 {"action":"SYS_LOG","actorType":"system","category":"SYSTEM","description":"[GITHUB_UPLINK] Initializing Dev Heartbeat Service...","id":"AL_1776340068408_q5c3on4","level":"info","message":"[GITHUB_UPLINK] Initializing Dev Heartbeat Service...","severity":"info","source":"api","status":"success","timestamp":"2026-04-16T11:47:48.408Z"}
 {"action":"SYS_LOG","category":"SYSTEM","level":"info","message":"Boot sequence complete. System operational.","timestamp":"2026-04-16T11:47:52.105Z"}
+{"action":"CONSOLE","category":"SYSTEM","level":"info","message":"[NETWORK_JOIN] Operator detected: frankie02225","timestamp":"2026-04-16T11:58:42.498Z"}
+{"action":"SYS_LOG","category":"USER","level":"info","message":"Operator frankie02225 joined. Account Age: 448 days.","timestamp":"2026-04-16T11:58:42.499Z"}
+{"action":"SYS_LOG","category":"USER","level":"info","message":"Welcome embed dispatched to #security-gates. ID 1494306039355539637 cached.","timestamp":"2026-04-16T11:58:43.143Z"}
+{"action":"CONSOLE","category":"SYSTEM","level":"info","message":"[NETWORK_JOIN] Operator detected: nightpotato180","timestamp":"2026-04-16T12:00:44.912Z"}
+{"action":"SYS_LOG","category":"USER","level":"info","message":"Operator nightpotato180 joined. Account Age: 3749 days.","timestamp":"2026-04-16T12:00:44.914Z"}
+{"action":"SYS_LOG","category":"USER","level":"info","message":"Welcome embed dispatched to #security-gates. ID 1494306552830754897 cached.","timestamp":"2026-04-16T12:00:45.563Z"}
+{"action":"SYS_LOG","category":"USER","level":"success","message":"Embed state updated to VERIFIED for nightpotato180","timestamp":"2026-04-16T12:00:53.360Z"}
+{"action":"CONSOLE","category":"SYSTEM","level":"info","message":"[NETWORK_LEAVE] Operator disconnected: nightpotato180","timestamp":"2026-04-16T12:01:16.570Z"}
+{"action":"SYS_LOG","category":"USER","level":"info","message":"Operator nightpotato180 disconnected.","timestamp":"2026-04-16T12:01:16.570Z"}
