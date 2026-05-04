@@ -1,0 +1,39 @@
+services:
+  tasdyn-ai:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tasdyn-ai
+    restart: unless-stopped
+
+    # Load all bot credentials and channel IDs from the .env file.
+    # The .env file is never baked into the image — only read at runtime.
+    env_file:
+      - .env
+
+    volumes:
+      # SQLite database — mounted as a directory so better-sqlite3 can create files freely
+      - db_data:/app/data
+
+      # Audit log files written by the bot
+      - audit_logs:/app/audit_logs
+
+    # No inbound ports needed — the bot only makes outbound connections to Discord
+    # Uncomment if you add an HTTP/metrics endpoint in future:
+    # ports:
+    #   - "3000:3000"
+
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+volumes:
+  # Named volume — persists the SQLite database across container rebuilds/restarts
+  db_data:
+    driver: local
+
+  # Named volume — persists daily audit log files
+  audit_logs:
+    driver: local

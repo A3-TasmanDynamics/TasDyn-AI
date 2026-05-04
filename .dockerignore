@@ -1,0 +1,23 @@
+node_modules
+.env
+.git
+.gitignore
+
+# SQLite data directory — managed by Docker volumes, not baked into the image
+data/
+database.db
+database.db-shm
+database.db-wal
+dev.db
+
+# Audit logs — managed by Docker volumes
+audit_logs/
+
+# TypeScript build artefacts
+generated/
+*.tsbuildinfo
+
+# Misc
+*.log
+.DS_Store
+Thumbs.db

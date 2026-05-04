@@ -6,11 +6,6 @@
     "auditLog": "E:\\2. Tasman Dynamics\\0. github\\TasDyn-AI\\audit_logs\\.ba56bd7fd9b6e1e714f803a78503481e292e2293-audit.json",
     "files": [
         {
-            "date": 1776338429714,
-            "name": "E:\\2. Tasman Dynamics\\0. github\\TasDyn-AI\\audit_logs\\audit-2026-04-16.json",
-            "hash": "4d5771fac5560ac079c759685932eb222acc3cc4c5e8e153e2c75757ef0479d9"
-        },
-        {
             "date": 1776667064182,
             "name": "E:\\2. Tasman Dynamics\\0. github\\TasDyn-AI\\audit_logs\\audit-2026-04-20.json",
             "hash": "9ca67d3e1928e78f0c1c0e295c24a89d1c1e2692d8437f9485245a7ccfaf0b02"
@@ -29,6 +24,16 @@
             "date": 1777507811118,
             "name": "E:\\2. Tasman Dynamics\\0. github\\TasDyn-AI\\audit_logs\\audit-2026-04-30.json",
             "hash": "3f03fb1e973aecd9a471d7bb4237d4d10a2eb3a9d5262e8989a23fbe31a933b2"
+        },
+        {
+            "date": 1777741316970,
+            "name": "E:\\2. Tasman Dynamics\\0. github\\TasDyn-AI\\audit_logs\\audit-2026-05-03.json",
+            "hash": "23b80f14ed169448947c7fde30b784cda83076634f8ae6ac17641cbc35934a7f"
+        },
+        {
+            "date": 1777817921100,
+            "name": "E:\\2. Tasman Dynamics\\0. github\\TasDyn-AI\\audit_logs\\audit-2026-05-04.json",
+            "hash": "f2bdc5333b88d1e71c91bc4b0e00b62d0c7c5b9172796eb3f618c8046fca8555"
         }
     ],
     "hashType": "sha256"

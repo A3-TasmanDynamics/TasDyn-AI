@@ -59,15 +59,15 @@ export class SteamWatchService {
     }
 
     private static async post(client: Client, item: WatchedItem, entry: ChangelogEntry): Promise<void> {
-        const channelId = process.env.DISCORD_CHANNEL_RELEASES_ID;
+        const channelId = process.env.DISCORD_CHANNEL_MOD_UPDATES_ID;
         if (!channelId) {
-            Syslog.warn('steam_watch', 'DISCORD_CHANNEL_RELEASES_ID is not set — cannot dispatch changelog.');
+            Syslog.warn('steam_watch', 'DISCORD_CHANNEL_MOD_UPDATES_ID is not set — cannot dispatch changelog.');
             return;
         }
 
         const channel = await client.channels.fetch(channelId).catch(() => null) as TextChannel | null;
         if (!channel?.isTextBased()) {
-            Syslog.warn('steam_watch', `Releases channel (${channelId}) not found or is not a text channel.`);
+            Syslog.warn('steam_watch', `Mod updates channel (${channelId}) not found or is not a text channel.`);
             return;
         }
 
