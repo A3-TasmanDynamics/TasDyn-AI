@@ -3,6 +3,33 @@ import { Config } from '../../core/config';
 import { Syslog } from '../../core/syslog';
 import { db } from '../../core/database';
 
+/** Retryable HTTP codes — transient server/gateway errors */
+const RETRYABLE = new Set([429, 500, 502, 503, 504]);
+
+/**
+ * Wraps fetch with exponential backoff for transient GitHub API errors.
+ * Respects the Retry-After header on 429 responses.
+ */
+async function fetchWithRetry(url: string, init: RequestInit, maxAttempts = 4): Promise<Response> {
+    let delay = 2000;
+    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+        const response = await fetch(url, init);
+        if (response.ok || !RETRYABLE.has(response.status)) return response;
+
+        if (attempt === maxAttempts) return response;
+
+        // Respect Retry-After if present (value is seconds)
+        const retryAfter = response.headers.get('Retry-After');
+        const wait = retryAfter ? parseInt(retryAfter, 10) * 1000 : delay;
+
+        Syslog.warn('github_uplink', `HTTP ${response.status} from GitHub API — retrying in ${wait / 1000}s (attempt ${attempt}/${maxAttempts})`);
+        await new Promise(res => setTimeout(res, wait));
+        delay *= 2;
+    }
+    // Unreachable, but satisfies the compiler
+    return fetch(url, init);
+}
+
 export class CommitTracker {
     private static ORG_NAME = 'A3-TasmanDynamics';
     private static API_BASE = 'https://api.github.com';
@@ -26,10 +53,10 @@ export class CommitTracker {
      * Fetches all active repositories for the organization
      */
     private static async fetchOrgRepos(): Promise<any[]> {
-        const response = await fetch(`${this.API_BASE}/orgs/${this.ORG_NAME}/repos?sort=updated`, {
+        const response = await fetchWithRetry(`${this.API_BASE}/orgs/${this.ORG_NAME}/repos?sort=updated`, {
             headers: {
                 'User-Agent': 'TasDyn-AI-Sovereign',
-                'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
+                'Authorization': `Bearer ${Config.github.token}`,
                 'Accept': 'application/vnd.github.v3+json'
             }
         });
@@ -48,10 +75,10 @@ export class CommitTracker {
      */
     private static async processRepoCommits(client: Client, repo: any) {
         try {
-            const response = await fetch(`${this.API_BASE}/repos/${repo.full_name}/commits?per_page=1`, {
+            const response = await fetchWithRetry(`${this.API_BASE}/repos/${repo.full_name}/commits?per_page=1`, {
                 headers: {
                     'User-Agent': 'TasDyn-AI-Sovereign',
-                    'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`
+                    'Authorization': `Bearer ${Config.github.token}`
                 }
             });
 

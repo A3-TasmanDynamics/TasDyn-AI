@@ -33,6 +33,8 @@ const envSchema = z.object({
     DISCORD_ROLE_DEVELOPER_ID: z.string().min(1, "Missing developer role ID"),
     DISCORD_ROLE_STAFF_ID: z.string().min(1, "Missing staff role ID"),
     DISCORD_ROLE_COMMUNITY_ID: z.string().min(1, "Missing community role ID"),
+
+    GITHUB_TOKEN: z.string().min(1, "Missing GitHub personal access token"),
 });
 
 const parsed = envSchema.safeParse(process.env);
@@ -78,11 +80,14 @@ export const Config = {
     },
     api: {
         weather: {
-        token: env.API_WEATHER_TOKEN,
+            token: env.API_WEATHER_TOKEN,
         },
         database: {
-        url: env.API_DATABASE_URL,
+            url: env.API_DATABASE_URL,
         }
+    },
+    github: {
+        token: env.GITHUB_TOKEN,
     },
     log_routing: {
         SYSTEM: 'tasdyn_logs',
