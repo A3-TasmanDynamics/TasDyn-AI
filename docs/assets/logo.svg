@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 480" width="1700" height="480">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="55%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="55%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="42%" r="65%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.4"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Icon mark -->
+  <g transform="translate(40,40) scale(0.390625)">
+    <rect width="1024" height="1024" rx="200" fill="url(#bg)"/>
+    <rect width="1024" height="1024" rx="200" fill="url(#vignette)"/>
+    <circle cx="512" cy="512" r="352" fill="none" stroke="#f59e0b" stroke-width="5" opacity="0.35"/>
+    <g stroke="url(#amber)" stroke-width="10" stroke-linecap="round" opacity="0.85">
+      <line x1="512" y1="140" x2="512" y2="182"/>
+      <line x1="512" y1="842" x2="512" y2="884"/>
+      <line x1="140" y1="512" x2="182" y2="512"/>
+      <line x1="842" y1="512" x2="884" y2="512"/>
+    </g>
+    <g stroke="url(#amber)" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.9">
+      <path d="M118,214 L118,150 Q118,118 150,118 L214,118"/>
+      <path d="M906,810 L906,874 Q906,906 874,906 L810,906"/>
+    </g>
+    <text x="512" y="610" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-weight="700"
+          font-size="440" fill="url(#amber)">&gt;_</text>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="490" y="248" font-family="Arial, Helvetica, sans-serif" font-weight="800"
+        font-size="108" letter-spacing="4" fill="#f1f5f9">TASDYN-AI</text>
+
+  <!-- Tagline -->
+  <text x="494" y="308" font-family="Consolas, 'Courier New', monospace" font-weight="700"
+        font-size="32" letter-spacing="4" fill="#f59e0b">KERNEL-DRIVEN DISCORD OPS</text>
+
+  <!-- Baseline rule -->
+  <rect x="494" y="336" width="900" height="2" fill="#334155"/>
+  <text x="494" y="378" font-family="Consolas, 'Courier New', monospace" font-weight="500"
+        font-size="26" letter-spacing="3" fill="#64748b">A TASMAN DYNAMICS SYSTEMS PROJECT</text>
+</svg>

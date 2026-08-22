@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="55%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="55%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="42%" r="65%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.4"/>
+    </radialGradient>
+  </defs>
+
+  <!-- full-bleed square: Discord applies its own circular mask -->
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <rect width="1024" height="1024" fill="url(#vignette)"/>
+
+  <!-- Reticle ring, well inside the circular safe zone -->
+  <circle cx="512" cy="512" r="352" fill="none" stroke="#f59e0b" stroke-width="5" opacity="0.35"/>
+  <g stroke="url(#amber)" stroke-width="10" stroke-linecap="round" opacity="0.85">
+    <line x1="512" y1="140" x2="512" y2="182"/>
+    <line x1="512" y1="842" x2="512" y2="884"/>
+    <line x1="140" y1="512" x2="182" y2="512"/>
+    <line x1="842" y1="512" x2="884" y2="512"/>
+  </g>
+
+  <!-- Emblem: kernel terminal prompt -->
+  <text x="512" y="610" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-weight="700"
+        font-size="440" fill="url(#amber)">&gt;_</text>
+</svg>
