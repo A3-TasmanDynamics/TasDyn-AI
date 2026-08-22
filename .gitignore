@@ -3,3 +3,13 @@ node_modules
 .env
 
 /generated/prisma
+
+# SQLite data files and audit logs — these hold real member/ticket/moderation data and must
+# never be committed. See docs/SECURITY-DATABASE.md: history predating this .gitignore entry
+# still needs scrubbing.
+data/
+*.db
+*.db-shm
+*.db-wal
+audit_logs/
+
